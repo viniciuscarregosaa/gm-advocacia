@@ -60,7 +60,7 @@ export default function About() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-                className="absolute -bottom-6 left-1/2 -translate-x-1/2 glass rounded-xl px-5 py-2.5 border text-center whitespace-nowrap"
+                className="absolute -bottom-6 left-1/2 -translate-x-1/2 glass rounded-xl px-3 sm:px-5 py-2.5 border text-center w-max max-w-[90vw]"
                 style={{ borderColor: 'rgba(201,161,74,0.25)' }}
               >
                 <div className="font-serif text-sm font-semibold" style={{ color: GOLD }}>
