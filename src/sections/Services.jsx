@@ -140,20 +140,38 @@ export default function Services() {
               href={WA_LINK}
               target="_blank"
               rel="noreferrer"
-              className="group glass rounded-2xl p-7 border border-white/[0.06] hover:border-gold/30 transition-all duration-300 h-full flex flex-col items-start justify-between hover:-translate-y-1 min-h-[200px]"
-              style={{ display: 'flex', flexDirection: 'column' }}
+              className="group relative rounded-2xl p-7 border transition-all duration-300 h-full flex flex-col items-start justify-between hover:-translate-y-1 min-h-[200px] overflow-hidden"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                background: 'rgba(201,161,74,0.07)',
+                borderColor: 'rgba(201,161,74,0.35)',
+                boxShadow: '0 0 30px rgba(201,161,74,0.08)',
+              }}
             >
+              {/* Linha dourada topo */}
+              <div
+                className="absolute top-0 left-0 right-0 h-px"
+                style={{ background: `linear-gradient(90deg, transparent, ${GOLD}70, transparent)` }}
+              />
+
               <div>
                 <h3 className="font-serif text-xl font-semibold text-cream mb-3">
                   Não encontrou sua situação?
                 </h3>
-                <p className="text-sm text-cream/50">
+                <p className="text-sm text-cream/60">
                   Entre em contato e nos conte seu caso. Analisamos gratuitamente e indicamos o melhor caminho.
                 </p>
               </div>
+
+              {/* Botão em destaque */}
               <div
-                className="mt-6 flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all"
-                style={{ color: GOLD }}
+                className="mt-6 w-full flex items-center justify-center gap-2 font-semibold text-sm px-5 py-3 rounded-xl transition-all duration-300 group-hover:gap-3 group-hover:opacity-90"
+                style={{
+                  background: GOLD,
+                  color: '#0A0A0A',
+                  boxShadow: '0 0 20px rgba(201,161,74,0.3)',
+                }}
               >
                 Falar com um advogado
                 <ArrowRight className="w-4 h-4" />
