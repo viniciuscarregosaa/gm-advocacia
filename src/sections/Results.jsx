@@ -64,7 +64,7 @@ export default function Results() {
             <TrendingUp className="w-3 h-3" />
             Nossos Resultados
           </span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
             Números que{' '}
             <span className="gold-gradient">comprovam</span>
           </h2>

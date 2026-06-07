@@ -88,7 +88,7 @@ export default function About() {
               >
                 Sobre o Escritório
               </span>
-              <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-5 leading-[1.1]">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold mb-5 leading-[1.1]">
                 Advocacia com{' '}
                 <span className="gold-gradient">propósito e</span>{' '}
                 dedicação
@@ -134,7 +134,7 @@ export default function About() {
           >
             Nossa Equipe
           </span>
-          <h2 className="font-serif text-4xl lg:text-5xl font-semibold leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
             Quem vai{' '}
             <span className="gold-gradient">lutar por você</span>
           </h2>

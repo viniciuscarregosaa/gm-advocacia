@@ -63,7 +63,7 @@ export default function HowItWorks() {
           >
             Como Trabalhamos
           </span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
             Do primeiro contato ao{' '}
             <span className="gold-gradient">seu resultado</span>
           </h2>

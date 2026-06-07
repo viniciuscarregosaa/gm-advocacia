@@ -32,6 +32,19 @@ body {
   cursor: none;
 }
 
+/* Seções — padding vertical reduzido em mobile */
+section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  .py-36 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
 /* Gold scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

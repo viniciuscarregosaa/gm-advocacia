@@ -50,7 +50,7 @@ export default function BPC() {
           >
             BPC / LOAS
           </span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
             Quem tem direito ao{' '}
             <span className="gold-gradient">BPC?</span>
           </h2>

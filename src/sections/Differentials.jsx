@@ -66,7 +66,7 @@ export default function Differentials() {
           >
             Por que nos escolher
           </span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
             O que nos{' '}
             <span className="gold-gradient">diferencia</span>
           </h2>

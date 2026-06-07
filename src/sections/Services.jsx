@@ -68,7 +68,7 @@ export default function Services() {
             <Scale className="w-3 h-3" />
             Áreas de Atuação
           </span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
             Especialistas em{' '}
             <span className="gold-gradient">suas causas</span>
           </h2>

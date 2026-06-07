@@ -73,7 +73,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-serif text-5xl lg:text-7xl font-semibold leading-tight mb-6"
+            className="font-serif text-3xl sm:text-5xl lg:text-7xl font-semibold leading-tight mb-6"
           >
             Seu direito pode estar mais próximo{' '}
             <span className="gold-gradient">do que você imagina.</span>

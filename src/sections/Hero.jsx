@@ -59,11 +59,12 @@ export default function Hero() {
               transition={{ delay: 0.1 }}
             >
               <span
-                className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium border"
+                className="inline-flex flex-wrap items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-medium border"
                 style={{ borderColor: 'rgba(201,161,74,0.3)', color: GOLD }}
               >
-                <Shield className="w-3 h-3" />
-                Advocacia Especializada · OAB/SE 17.656 · OAB/SE 15.984
+                <Shield className="w-3 h-3 flex-shrink-0" />
+                <span>Advocacia Especializada</span>
+                <span className="hidden sm:inline">· OAB/SE 17.656 · OAB/SE 15.984</span>
               </span>
             </motion.div>
 
@@ -73,7 +74,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
-              className="font-serif text-5xl lg:text-7xl font-semibold leading-[1.08] tracking-tight"
+              className="font-serif text-4xl sm:text-5xl lg:text-7xl font-semibold leading-[1.08] tracking-tight"
             >
               Seu direito,{' '}
               <span className="gold-gradient">defendido com</span>{' '}
@@ -146,7 +147,39 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right — scales decoration */}
+          {/* Foto mobile — visível só em telas pequenas */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.5 }}
+            className="lg:hidden relative w-full mt-2"
+          >
+            <motion.img
+              src="/LOGO.jpg"
+              alt="GM Advocacia"
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -top-10 left-1/2 -translate-x-1/2 z-20 w-20 h-20 object-contain"
+              style={{ filter: 'drop-shadow(0 0 14px rgba(201,161,74,0.5))' }}
+            />
+            <div className="absolute -top-2 -left-2 w-8 h-8 pointer-events-none">
+              <div className="absolute top-0 left-0 w-full h-px" style={{ background: GOLD }} />
+              <div className="absolute top-0 left-0 h-full w-px" style={{ background: GOLD }} />
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-full h-px" style={{ background: GOLD }} />
+              <div className="absolute bottom-0 right-0 h-full w-px" style={{ background: GOLD }} />
+            </div>
+            <img
+              src="/milene_e_gabriel.png"
+              alt="Dr. Gabriel Freitas e Dra. Milene Andrade"
+              className="w-full h-auto rounded-2xl mt-8"
+              style={{ border: '1px solid rgba(201,161,74,0.25)' }}
+            />
+          </motion.div>
+
+          {/* Right — desktop only */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
