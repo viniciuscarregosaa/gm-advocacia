@@ -3,6 +3,10 @@ import { useEffect, useRef } from 'react'
 const GOLD = '#C9A14A'
 
 export default function CustomCursor() {
+  // Não renderiza em dispositivos touch (mobile/tablet)
+  if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
+    return null
+  }
   const dotRef = useRef(null)
   const ringRef = useRef(null)
   const posRef = useRef({ x: 0, y: 0 })
