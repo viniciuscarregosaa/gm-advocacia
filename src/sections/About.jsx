@@ -35,8 +35,9 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex items-center justify-center"
+            className="flex flex-col items-center justify-center gap-6"
           >
+            {/* Logo com cantos decorativos */}
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-12 h-12 pointer-events-none">
                 <div className="absolute top-0 left-0 w-full h-px" style={{ background: GOLD }} />
@@ -57,20 +58,22 @@ export default function About() {
                 animate={{ y: [0, -12, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               />
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
-                className="absolute -bottom-6 left-1/2 -translate-x-1/2 glass rounded-xl px-3 sm:px-5 py-2.5 border text-center w-max max-w-[90vw]"
-                style={{ borderColor: 'rgba(201,161,74,0.25)' }}
-              >
-                <div className="font-serif text-sm font-semibold" style={{ color: GOLD }}>
-                  Advocacia Especializada
-                </div>
-                <div className="text-[10px] text-cream/40 tracking-widest uppercase mt-0.5">
-                  Com Excelência e Humanidade
-                </div>
-              </motion.div>
             </div>
+
+            {/* Badge — no fluxo normal, sem absolute, sem overflow */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+              className="glass rounded-xl px-5 py-2.5 border text-center"
+              style={{ borderColor: 'rgba(201,161,74,0.25)' }}
+            >
+              <div className="font-serif text-sm font-semibold" style={{ color: GOLD }}>
+                Advocacia Especializada
+              </div>
+              <div className="text-[10px] text-cream/40 tracking-widest uppercase mt-0.5">
+                Com Excelência e Humanidade
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Texto */}
