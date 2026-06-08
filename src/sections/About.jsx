@@ -3,6 +3,7 @@ import { Scale, BookOpen, CheckCircle2 } from 'lucide-react'
 import { slideInLeft, slideInRight } from '../utils/animations'
 
 const GOLD = '#C9A14A'
+const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
 
 const advocates = [
   {
@@ -55,14 +56,14 @@ export default function About() {
                 src="/LOGO.jpg"
                 alt="GM Advocacia"
                 className="relative z-10 w-56 h-56 object-contain"
-                animate={{ y: [0, -12, 0] }}
+                animate={isMobile ? {} : { y: [0, -12, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               />
             </div>
 
             {/* Badge — no fluxo normal, sem absolute, sem overflow */}
             <motion.div
-              animate={{ y: [0, -8, 0] }}
+              animate={isMobile ? {} : { y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
               className="glass rounded-xl px-5 py-2.5 border text-center"
               style={{ borderColor: 'rgba(201,161,74,0.25)' }}

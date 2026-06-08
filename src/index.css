@@ -49,6 +49,23 @@ section {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
   }
+
+  /* Desativa animações contínuas de float no mobile */
+  .animate-float,
+  [style*="translateY"] {
+    animation: none !important;
+  }
+
+  /* Remove blur decorativo pesado no mobile */
+  [style*="filter: blur"] {
+    filter: none !important;
+  }
+}
+
+/* Promove elementos animados para camada GPU própria */
+[data-framer-component-type],
+.will-animate {
+  will-change: transform;
 }
 
 /* Gold scrollbar */
@@ -77,6 +94,15 @@ section {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Mobile: remove backdrop-filter (muito pesado para GPU mobile) */
+  @media (max-width: 768px) {
+    .glass {
+      background: rgba(20, 20, 20, 0.75);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
   }
 
   .gold-gradient {

@@ -4,6 +4,7 @@ import { fadeUp } from '../utils/animations'
 
 const GOLD = '#C9A14A'
 const WA_LINK = 'https://wa.me/5579998143411'
+const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
 
 const ScalesDecoration = () => (
   <svg
@@ -158,7 +159,7 @@ export default function Hero() {
             <motion.img
               src="/LOGO.jpg"
               alt="GM Advocacia"
-              animate={{ y: [0, -5, 0] }}
+              animate={isMobile ? {} : { y: [0, -5, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -top-10 left-1/2 -translate-x-1/2 z-20 w-20 h-20 object-contain"
               style={{ filter: 'drop-shadow(0 0 14px rgba(201,161,74,0.5))' }}
@@ -201,7 +202,7 @@ export default function Hero() {
               <motion.img
                 src="/LOGO.jpg"
                 alt="GM Advocacia"
-                animate={{ y: [0, -6, 0] }}
+                animate={isMobile ? {} : { y: [0, -6, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute -top-24 left-1/3 -translate-x-1/2 z-20 w-36 h-36 object-contain drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 0 18px rgba(201,161,74,0.5))' }}
