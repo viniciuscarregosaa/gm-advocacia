@@ -9,8 +9,9 @@ const links = [
   { label: 'Início', href: '#inicio' },
   { label: 'Serviços', href: '#servicos' },
   { label: 'BPC/LOAS', href: '#bpc' },
-  { label: 'Resultados', href: '#resultados' },
+  { label: 'Equipe', href: '#equipe' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'Contatos', href: '#contatos' },
 ]
 
 export default function Navbar() {

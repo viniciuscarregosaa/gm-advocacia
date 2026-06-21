@@ -28,6 +28,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer
+      id="contatos"
       className="border-t pt-20 pb-10 relative overflow-hidden"
       style={{ borderColor: 'rgba(201,161,74,0.1)' }}
     >
