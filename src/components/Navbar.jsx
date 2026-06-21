@@ -9,8 +9,8 @@ const links = [
   { label: 'Início', href: '#inicio' },
   { label: 'Serviços', href: '#servicos' },
   { label: 'BPC/LOAS', href: '#bpc' },
-  { label: 'Equipe', href: '#equipe' },
   { label: 'Sobre', href: '#sobre' },
+  { label: 'Equipe', href: '#equipe' },
   { label: 'Contatos', href: '#contatos' },
 ]
 
