@@ -1,7 +1,7 @@
 import { Instagram, Facebook, Phone } from 'lucide-react'
 
 const GOLD = '#C9A14A'
-const WA_LINK = 'https://wa.me/5579998143411'
+const WA_LINK = 'https://wa.me/5579998153411'
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -60,11 +60,11 @@ export default function Footer() {
             {/* Contact info */}
             <div className="space-y-2">
               <a
-                href="tel:+5579998143411"
+                href="tel:+5579998153411"
                 className="flex items-center gap-2.5 text-sm text-cream/40 hover:text-cream transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 flex-shrink-0" style={{ color: GOLD }} />
-                Gabriel: (79) 9 9814-3411
+                Gabriel: (79) 9 9815-3411
               </a>
               <a
                 href="tel:+5579999031159"

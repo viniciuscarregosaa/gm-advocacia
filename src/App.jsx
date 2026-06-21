@@ -5,7 +5,6 @@ import Services from './sections/Services'
 import Differentials from './sections/Differentials'
 import HowItWorks from './sections/HowItWorks'
 import BPC from './sections/BPC'
-import Results from './sections/Results'
 import About from './sections/About'
 import CTA from './sections/CTA'
 import Footer from './sections/Footer'
@@ -21,7 +20,6 @@ export default function App() {
         <Differentials />
         <HowItWorks />
         <BPC />
-        <Results />
         <About />
         <CTA />
       </main>

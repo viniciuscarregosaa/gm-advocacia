@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Scale } from 'lucide-react'
 import { fadeUp } from '../utils/animations'
 
 const GOLD = '#C9A14A'
-const WA_LINK = 'https://wa.me/5579998143411'
+const WA_LINK = 'https://wa.me/5579998153411'
 const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
 
 const ScalesDecoration = () => (
@@ -125,27 +125,6 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Trust badges */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.5 }}
-              className="flex flex-wrap items-center gap-6 pt-2"
-            >
-              {[
-                { n: '500+', label: 'Casos Atendidos' },
-                { n: '87%', label: 'Taxa de Êxito' },
-                { n: '5+', label: 'Anos de Experiência' },
-              ].map((stat) => (
-                <div key={stat.label} className="flex flex-col">
-                  <span className="font-serif text-2xl font-semibold" style={{ color: GOLD }}>
-                    {stat.n}
-                  </span>
-                  <span className="text-xs text-cream/40">{stat.label}</span>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Foto mobile — visível só em telas pequenas */}

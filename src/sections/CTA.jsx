@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Scale } from 'lucide-react'
 
 const GOLD = '#C9A14A'
-const WA_LINK = 'https://wa.me/5579998143411'
+const WA_LINK = 'https://wa.me/5579998153411'
 
 export default function CTA() {
   const glowRef = useRef(null)

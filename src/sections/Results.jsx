@@ -32,7 +32,7 @@ const metrics = [
   {
     icon: Award,
     prefix: '',
-    value: 5,
+    value: 6,
     suffix: '',
     label: 'Áreas de Atuação',
     sub: 'Especialização focada e aprofundada',

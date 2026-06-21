@@ -42,12 +42,7 @@ export default function HowItWorks() {
   const isLineInView = useInView(lineRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="como-funciona" className="py-36 relative overflow-hidden">
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: 'rgba(201,161,74,0.025)', filter: 'blur(140px)' }}
-      />
-
+    <section id="como-funciona" className="py-36 relative overflow-hidden" style={{ background: '#F5F3EE' }}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -58,16 +53,16 @@ export default function HowItWorks() {
           className="text-center mb-20"
         >
           <span
-            className="inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
-            style={{ borderColor: 'rgba(201,161,74,0.25)', color: GOLD }}
+            className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
+            style={{ background: 'rgba(201,161,74,0.1)', borderColor: 'rgba(201,161,74,0.3)', color: GOLD }}
           >
             Como Trabalhamos
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight text-background">
             Do primeiro contato ao{' '}
             <span className="gold-gradient">seu resultado</span>
           </h2>
-          <p className="text-cream/50 max-w-xl mx-auto text-lg">
+          <p className="text-[#6B6B6B] max-w-xl mx-auto text-lg">
             Um processo transparente e estruturado. Você nunca ficará sem resposta.
           </p>
         </motion.div>
@@ -84,7 +79,7 @@ export default function HowItWorks() {
               initial={{ scaleX: 0 }}
               animate={isLineInView ? { scaleX: 1 } : {}}
               transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              style={{ background: `linear-gradient(90deg, ${GOLD}20, ${GOLD}60, ${GOLD}20)` }}
+              style={{ background: `linear-gradient(90deg, ${GOLD}40, ${GOLD}80, ${GOLD}40)` }}
             />
           </div>
 
@@ -104,8 +99,8 @@ export default function HowItWorks() {
                   <div className="relative mb-6">
                     <motion.div
                       whileHover={{ scale: 1.06 }}
-                      className="w-20 h-20 rounded-2xl glass border flex items-center justify-center relative z-10 transition-all duration-300"
-                      style={{ borderColor: 'rgba(201,161,74,0.2)' }}
+                      className="w-20 h-20 rounded-2xl bg-white border flex items-center justify-center relative z-10 transition-all duration-300"
+                      style={{ borderColor: 'rgba(201,161,74,0.3)', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
                     >
                       <Icon className="w-7 h-7" style={{ color: GOLD }} />
                     </motion.div>
@@ -119,14 +114,14 @@ export default function HowItWorks() {
                     </div>
                   </div>
 
-                  <h3 className="font-serif font-semibold text-cream mb-2 text-base">{step.title}</h3>
-                  <p className="text-sm text-cream/50 leading-relaxed">{step.description}</p>
+                  <h3 className="font-serif font-semibold text-background mb-2 text-base">{step.title}</h3>
+                  <p className="text-sm text-[#6B6B6B] leading-relaxed">{step.description}</p>
 
                   {/* Mobile connector */}
                   {i < steps.length - 1 && (
                     <div
                       className="lg:hidden w-px h-8 mt-6"
-                      style={{ background: 'rgba(201,161,74,0.25)' }}
+                      style={{ background: 'rgba(201,161,74,0.4)' }}
                     />
                   )}
                 </motion.div>

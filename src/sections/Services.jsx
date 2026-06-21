@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { Scale, Heart, Users, ShoppingCart, FileText, ArrowRight } from 'lucide-react'
+import { Scale, Heart, Users, ShoppingCart, FileText, ArrowRight, Briefcase } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
 
 const GOLD = '#C9A14A'
-const WA_LINK = 'https://wa.me/5579998143411'
+const WA_LINK = 'https://wa.me/5579998153411'
 
 const services = [
   {
@@ -41,17 +41,18 @@ const services = [
       'Proteção contra práticas abusivas, cobranças indevidas, negativação indevida e problemas com serviços e produtos.',
     highlight: false,
   },
+  {
+    icon: Briefcase,
+    title: 'Direito Trabalhista',
+    description:
+      'Atuamos na defesa dos trabalhadores em casos de demissão, horas extras, verbas rescisórias, assédio moral e outros direitos violados. Nosso compromisso é garantir a efetiva proteção dos direitos trabalhistas.',
+    highlight: false,
+  },
 ]
 
 export default function Services() {
   return (
-    <section id="servicos" className="py-36 relative overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-20" />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: 'rgba(201,161,74,0.03)', filter: 'blur(150px)' }}
-      />
-
+    <section id="servicos" className="py-36 relative overflow-hidden" style={{ background: '#F5F3EE' }}>
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Header */}
         <motion.div
@@ -62,17 +63,17 @@ export default function Services() {
           className="text-center mb-20"
         >
           <span
-            className="inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
-            style={{ borderColor: 'rgba(201,161,74,0.25)', color: GOLD }}
+            className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
+            style={{ background: 'rgba(201,161,74,0.1)', borderColor: 'rgba(201,161,74,0.3)', color: GOLD }}
           >
             <Scale className="w-3 h-3" />
             Áreas de Atuação
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 leading-tight text-background">
             Especialistas em{' '}
             <span className="gold-gradient">suas causas</span>
           </h2>
-          <p className="text-cream/50 max-w-xl mx-auto text-lg">
+          <p className="text-[#6B6B6B] max-w-xl mx-auto text-lg">
             Atuação focada nas áreas que mais afetam o dia a dia das pessoas. Cada caso tratado com atenção individual.
           </p>
         </motion.div>
@@ -90,10 +91,10 @@ export default function Services() {
                 transition={{ duration: 0.65, delay: i * 0.09 }}
               >
                 <GlowCard
-                  className={`glass rounded-2xl p-7 border h-full transition-all duration-300 hover:-translate-y-1 ${
+                  className={`bg-white rounded-2xl p-7 border h-full transition-all duration-300 hover:-translate-y-1 ${
                     s.highlight
                       ? 'border-gold/30'
-                      : 'border-white/[0.06] hover:border-gold/20'
+                      : 'border-black/[0.07] hover:border-gold/30'
                   }`}
                 >
                   {s.highlight && (
@@ -106,15 +107,15 @@ export default function Services() {
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 border"
                     style={{
-                      background: s.highlight ? 'rgba(201,161,74,0.12)' : 'rgba(201,161,74,0.06)',
-                      borderColor: 'rgba(201,161,74,0.2)',
+                      background: s.highlight ? 'rgba(201,161,74,0.12)' : 'rgba(201,161,74,0.08)',
+                      borderColor: 'rgba(201,161,74,0.25)',
                     }}
                   >
                     <Icon className="w-5 h-5" style={{ color: GOLD }} />
                   </div>
 
-                  <h3 className="font-serif text-xl font-semibold text-cream mb-3">{s.title}</h3>
-                  <p className="text-sm text-cream/50 leading-relaxed">{s.description}</p>
+                  <h3 className="font-serif text-xl font-semibold text-background mb-3">{s.title}</h3>
+                  <p className="text-sm text-[#6B6B6B] leading-relaxed">{s.description}</p>
 
                   {s.highlight && (
                     <div
@@ -144,7 +145,7 @@ export default function Services() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                background: 'rgba(201,161,74,0.07)',
+                background: 'rgba(201,161,74,0.08)',
                 borderColor: 'rgba(201,161,74,0.35)',
                 boxShadow: '0 0 30px rgba(201,161,74,0.08)',
               }}
@@ -156,10 +157,10 @@ export default function Services() {
               />
 
               <div>
-                <h3 className="font-serif text-xl font-semibold text-cream mb-3">
+                <h3 className="font-serif text-xl font-semibold text-background mb-3">
                   Não encontrou sua situação?
                 </h3>
-                <p className="text-sm text-cream/60">
+                <p className="text-sm text-[#555555]">
                   Entre em contato e nos conte seu caso. Analisamos gratuitamente e indicamos o melhor caminho.
                 </p>
               </div>

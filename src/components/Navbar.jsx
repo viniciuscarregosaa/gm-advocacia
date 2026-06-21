@@ -3,7 +3,7 @@ import { Menu, X, Phone } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const GOLD = '#C9A14A'
-const WA_LINK = 'https://wa.me/5579998143411'
+const WA_LINK = 'https://wa.me/5579998153411'
 
 const links = [
   { label: 'Início', href: '#inicio' },

@@ -20,7 +20,8 @@ const advocates = [
 
 export default function About() {
   return (
-    <section id="sobre" className="py-36 relative overflow-hidden">
+    <>
+    <section id="sobre" className="pt-36 pb-20 relative overflow-hidden">
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{ background: 'rgba(201,161,74,0.03)', filter: 'blur(150px)' }}
@@ -29,7 +30,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* — Sobre o escritório — */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Logo */}
           <motion.div
             variants={slideInLeft}
@@ -124,7 +125,13 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* — Quem vai lutar por você — */}
+      </div>
+    </section>
+
+    {/* — Nossa equipe — */}
+    <section id="equipe" className="py-36 relative overflow-hidden" style={{ background: '#F5F3EE' }}>
+      <div className="max-w-7xl mx-auto px-6">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,16 +140,16 @@ export default function About() {
           className="text-center mb-16"
         >
           <span
-            className="inline-flex items-center gap-1.5 glass rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
-            style={{ borderColor: 'rgba(201,161,74,0.25)', color: GOLD }}
+            className="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-medium border mb-6"
+            style={{ background: 'rgba(201,161,74,0.1)', borderColor: 'rgba(201,161,74,0.3)', color: GOLD }}
           >
             Nossa Equipe
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-background">
             Quem vai{' '}
             <span className="gold-gradient">lutar por você</span>
           </h2>
-          <p className="text-cream/50 max-w-lg mx-auto mt-4 text-lg">
+          <p className="text-[#6B6B6B] max-w-lg mx-auto mt-4 text-lg">
             Profissionais dedicados, preparados e comprometidos com o seu caso do início ao fim.
           </p>
         </motion.div>
@@ -159,13 +166,13 @@ export default function About() {
             >
               {/* Card */}
               <div
-                className="glass rounded-3xl overflow-hidden border transition-all duration-500 group-hover:border-gold/30"
-                style={{ borderColor: 'rgba(201,161,74,0.1)' }}
+                className="bg-white rounded-3xl overflow-hidden border transition-all duration-500 group-hover:border-gold/40"
+                style={{ borderColor: 'rgba(0,0,0,0.08)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
               >
                 {/* Top gold line */}
                 <div
                   className="h-px w-full"
-                  style={{ background: `linear-gradient(90deg, transparent, ${GOLD}50, transparent)` }}
+                  style={{ background: `linear-gradient(90deg, transparent, ${GOLD}60, transparent)` }}
                 />
 
                 {/* Foto */}
@@ -178,13 +185,13 @@ export default function About() {
                   {/* Gradient overlay bottom */}
                   <div
                     className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
-                    style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.95), transparent)' }}
+                    style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.9), transparent)' }}
                   />
                 </div>
 
                 {/* Info */}
                 <div className="px-7 pb-7 -mt-6 relative z-10 text-center">
-                  <div className="font-serif text-2xl font-semibold text-cream mb-1">
+                  <div className="font-serif text-2xl font-semibold text-background mb-1">
                     {adv.name}
                   </div>
                   <div
@@ -201,5 +208,6 @@ export default function About() {
 
       </div>
     </section>
+    </>
   )
 }
