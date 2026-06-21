@@ -164,39 +164,46 @@ export default function About() {
               transition={{ duration: 0.7, delay: i * 0.15 }}
               className="group relative"
             >
-              {/* Card */}
               <div
-                className="bg-white rounded-3xl overflow-hidden border transition-all duration-500 group-hover:border-gold/40"
-                style={{ borderColor: 'rgba(0,0,0,0.08)', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
+                className="rounded-3xl overflow-hidden border transition-all duration-500 group-hover:shadow-2xl group-hover:border-gold/50"
+                style={{
+                  borderColor: 'rgba(201,161,74,0.3)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
+                }}
               >
-                {/* Top gold line */}
-                <div
-                  className="h-px w-full"
-                  style={{ background: `linear-gradient(90deg, transparent, ${GOLD}60, transparent)` }}
-                />
-
                 {/* Foto */}
-                <div className="relative overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src={adv.photo}
                     alt={adv.name}
-                    className="w-full h-72 object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Gradient overlay bottom */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
-                    style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.9), transparent)' }}
+                    className="w-full h-80 object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 
-                {/* Info */}
-                <div className="px-7 pb-7 -mt-6 relative z-10 text-center">
-                  <div className="font-serif text-2xl font-semibold text-background mb-1">
+                {/* Info — seção escura sólida */}
+                <div
+                  className="px-7 py-7 text-center relative"
+                  style={{ background: '#0A0A0A', borderTop: `2px solid ${GOLD}` }}
+                >
+                  {/* Glow dourado suave atrás do texto */}
+                  <div
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 pointer-events-none"
+                    style={{ background: 'radial-gradient(ellipse, rgba(201,161,74,0.12), transparent 70%)', filter: 'blur(16px)' }}
+                  />
+
+                  {/* Nome */}
+                  <div className="font-serif text-2xl sm:text-3xl font-semibold text-cream mb-3 relative">
                     {adv.name}
                   </div>
+
+                  {/* OAB badge */}
                   <div
-                    className="inline-flex items-center gap-1.5 text-xs font-medium rounded-full px-3 py-1 mt-1"
-                    style={{ background: 'rgba(201,161,74,0.1)', color: GOLD }}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium rounded-full px-4 py-1.5 border relative"
+                    style={{
+                      background: 'rgba(201,161,74,0.1)',
+                      borderColor: 'rgba(201,161,74,0.4)',
+                      color: GOLD,
+                    }}
                   >
                     {adv.oab}
                   </div>
