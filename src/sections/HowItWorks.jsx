@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Phone, Search, FileCheck, Gavel, PartyPopper } from 'lucide-react'
+import { Phone, Search, FileCheck, Gavel, Trophy } from 'lucide-react'
 
 const GOLD = '#C9A14A'
 
@@ -30,7 +30,7 @@ const steps = [
       'Atuamos com rigor técnico em todas as instâncias, recursos e audiências necessárias para garantir seus direitos.',
   },
   {
-    icon: PartyPopper,
+    icon: Trophy,
     title: 'Resultado',
     description:
       'Trabalhamos até o resultado final. Seu benefício garantido, sua tranquilidade restaurada.',

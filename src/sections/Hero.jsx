@@ -36,7 +36,7 @@ const ScalesDecoration = () => (
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden" style={{ background: '#0A0A0A' }}>
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div

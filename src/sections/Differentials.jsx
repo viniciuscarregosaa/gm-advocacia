@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Heart, MessageCircle, Eye, Award, Lock, HandCoins } from 'lucide-react'
+import { Heart, MessageCircle, Bell, Award, Handshake, HandCoins } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
 
 const GOLD = '#C9A14A'
@@ -18,7 +18,7 @@ const differentials = [
       'Traduzimos o juridiquês para uma linguagem simples. Você sempre saberá o que está acontecendo no seu processo.',
   },
   {
-    icon: Eye,
+    icon: Bell,
     title: 'Acompanhamento Próximo',
     description:
       'Mantemos você informado em todas as etapas. Nenhuma decisão é tomada sem que você esteja ciente.',
@@ -30,7 +30,7 @@ const differentials = [
       'Anos de atuação focada em Direito Previdenciário e BPC/LOAS. Conhecemos cada detalhe que faz diferença no resultado.',
   },
   {
-    icon: Lock,
+    icon: Handshake,
     title: 'Total Transparência',
     description:
       'Honorários claros, sem surpresas. Apresentamos todas as possibilidades e riscos antes de assumir seu caso.',

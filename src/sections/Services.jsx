@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Scale, Heart, Users, ShoppingCart, FileText, ArrowRight, Briefcase } from 'lucide-react'
+import { Scale, Landmark, Home, ShoppingCart, FileText, ArrowRight, Briefcase } from 'lucide-react'
 import GlowCard from '../components/GlowCard'
 
 const GOLD = '#C9A14A'
@@ -7,7 +7,7 @@ const WA_LINK = 'https://wa.me/5579998153411'
 
 const services = [
   {
-    icon: Heart,
+    icon: Landmark,
     title: 'BPC/LOAS',
     description:
       'Benefício de Prestação Continuada para idosos acima de 65 anos e pessoas com deficiência de baixa renda. Não é necessário ter contribuído ao INSS.',
@@ -28,7 +28,7 @@ const services = [
     highlight: false,
   },
   {
-    icon: Users,
+    icon: Home,
     title: 'Direito de Família',
     description:
       'Divórcio, guarda e alimentos. Defendemos os interesses das famílias com sensibilidade, responsabilidade e agilidade.',
