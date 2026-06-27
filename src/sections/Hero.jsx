@@ -151,12 +151,16 @@ export default function Hero() {
               <div className="absolute bottom-0 right-0 w-full h-px" style={{ background: GOLD }} />
               <div className="absolute bottom-0 right-0 h-full w-px" style={{ background: GOLD }} />
             </div>
-            <img
-              src="/milene_e_gabriel.png"
-              alt="Dr. Gabriel Freitas e Dra. Milene Andrade"
-              className="w-full h-auto rounded-2xl mt-8"
+            <div
+              className="w-full aspect-[4/5] rounded-2xl overflow-hidden mt-8"
               style={{ border: '1px solid rgba(201,161,74,0.25)' }}
-            />
+            >
+              <img
+                src="/milene_e_gabriel.png"
+                alt="Dr. Gabriel Freitas e Dra. Milene Andrade"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
           </motion.div>
 
           {/* Right — desktop only */}
@@ -175,7 +179,7 @@ export default function Hero() {
               }}
             />
 
-            {/* Foto da equipe — sem corte */}
+            {/* Foto da equipe */}
             <div className="relative z-10 w-full">
               {/* Logo flutuando em cima da foto */}
               <motion.img
@@ -200,12 +204,16 @@ export default function Hero() {
                 <div className="absolute bottom-0 right-0 w-full h-px" style={{ background: GOLD }} />
                 <div className="absolute bottom-0 right-0 h-full w-px" style={{ background: GOLD }} />
               </div>
-              <img
-                src="/milene_e_gabriel.png"
-                alt="Dr. Gabriel Freitas e Dra. Milene Andrade"
-                className="relative z-10 w-full h-auto rounded-2xl"
+              <div
+                className="relative z-10 w-full aspect-[4/5] rounded-2xl overflow-hidden"
                 style={{ border: '1px solid rgba(201,161,74,0.25)' }}
-              />
+              >
+                <img
+                  src="/milene_e_gabriel.png"
+                  alt="Dr. Gabriel Freitas e Dra. Milene Andrade"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
